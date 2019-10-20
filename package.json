@@ -1,6 +1,6 @@
 {
-  "name": "egg-jwt",
-  "version": "3.1.6",
+  "name": "apitars-egg-jwt",
+  "version": "3.1.8",
   "description": "JWT authentication plugin for egg",
   "eggPlugin": {
     "name": "jwt",
@@ -38,12 +38,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/okoala/egg-jwt.git"
+    "url": "git+https://github.com/apitars/egg-jwt.git"
   },
   "bugs": {
-    "url": "https://github.com/okoala/egg-jwt/issues"
+    "url": "https://github.com/apitars/egg-jwt/issues"
   },
-  "homepage": "https://github.com/okoala/egg-jwt#readme",
+  "homepage": "https://github.com/apitars/egg-jwt#readme",
   "author": "okoala <dapixp@gmail.com>",
   "license": "MIT"
 }
