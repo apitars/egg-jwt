@@ -1,4 +1,9 @@
-import { SignOptions, SignCallback, VerifyOptions, VerifyCallback } from 'jsonwebtoken';
+import {
+  SignOptions,
+  SignCallback,
+  VerifyOptions,
+  VerifyCallback,
+} from 'jsonwebtoken';
 declare module 'egg' {
   interface Application {
     jwt: {
@@ -13,16 +18,21 @@ declare module 'egg' {
         payload: string | Buffer | object,
         secretOrPrivateKey: string,
         options?: SignOptions,
-        callback?: SignCallback
+        callback?: SignCallback,
       ): string;
       /**
        * call jsonwebtoken's verify() method
-       * @param token jwt token. 
+       * @param token jwt token.
        * @param secretOrPrivateKey secret key。string or { key, passphrase }
        * @param options jwt options。see more details in https://github.com/auth0/node-jsonwebtoken
        * @param callback callback
        */
-      verify(token: string, secretOrPrivateKey: string, options?: VerifyOptions, callback?: VerifyCallback): string;
+      verify(
+        token: string,
+        secretOrPrivateKey: string,
+        options?: VerifyOptions,
+        callback?: VerifyCallback,
+      ): string;
 
       /**
        * call jsonwebtoken's decode() method
@@ -37,6 +47,7 @@ declare module 'egg' {
       enable?: boolean;
       sign?: SignOptions;
       verify?: VerifyOptions;
+      credentialsRequired?: boolean;
     };
   }
 }
